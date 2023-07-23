@@ -1,3 +1,5 @@
 build/
 external/glew/*
 !external/glew/README.md
+external/imgui/*
+!external/imgui/README.md
