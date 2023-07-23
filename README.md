@@ -1,1 +1,1 @@
-CMake template for ImGui. GLFW glad glew installed
+CMake template for ImGui. GLFW glad glew installed. Google test
