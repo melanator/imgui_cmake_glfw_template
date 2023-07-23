@@ -6,8 +6,16 @@ project (electrical)
 
 add_subdirectory(external/googletest)
 add_subdirectory(external/glfw)
+add_subdirectory(external/glew/build/cmake)
 add_subdirectory(tests)
 
+add_library(glad external/glad/src/glad.c)
+
 add_executable (${PROJECT_NAME} "code/main.cpp")
-target_include_directories (${PROJECT_NAME} PUBLIC external/glfw/include external/glad/include)
-target_link_libraries (${PROJECT_NAME} glfw)
+target_include_directories (${PROJECT_NAME} PUBLIC 
+											external/glfw/include 
+											external/glad/include
+											external/glew/include
+)
+
+target_link_libraries (${PROJECT_NAME} glfw glad glew)

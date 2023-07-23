@@ -1,6 +1,5 @@
-#include <iostream>
-#include "glad/glad.h"
-#include "GLFW/glfw3.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 int main(void)
 {
@@ -9,6 +8,7 @@ int main(void)
     /* Initialize the library */
     if (!glfwInit())
         return -1;
+
 
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
@@ -25,7 +25,7 @@ int main(void)
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        //glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
